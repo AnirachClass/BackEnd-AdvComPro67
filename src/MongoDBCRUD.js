@@ -6,10 +6,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cors = require('cors');
 
 // Database connection
 mongoose.connect(
-  "mongodb://admin:SBFsqa14913@node40731-noderest.proen.app.ruk-com.cloud:11344",
+  "mongodb://admin:ejBmp0c8c6@node65651-rach-app.proen.app.ruk-com.cloud:11570",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -27,6 +28,7 @@ const Book = mongoose.model("Book", {
 });
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 // Create
