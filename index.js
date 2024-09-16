@@ -6,6 +6,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cors = require('cors');
 
 // Database connection
 mongoose.connect(
@@ -27,6 +28,7 @@ const Book = mongoose.model("Book", {
 });
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 // Create
