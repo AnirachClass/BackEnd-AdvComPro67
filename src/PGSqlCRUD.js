@@ -1,8 +1,11 @@
 const express = require('express');
 const Sequelize = require('sequelize');
 const app = express();
+const cors = require('cors');
 // parse incoming requests
 app.use(express.json());
+app.use(cors());
+
 
 // set db url
 
